@@ -121,7 +121,7 @@ Watch our final project presentation here:
 
 🔗 [Click to Watch on YouTube]((https://youtu.be/qOPBxL6EJgI))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+<iframe width="560" height="315" src="(https://youtu.be/qOPBxL6EJgI)" 
 title="AI for Early Detection of Fetal Abnormalities" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ---
