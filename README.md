@@ -39,10 +39,66 @@ Traditional fetal anomaly screening methods could be reliant on subjective inter
 ```
 ⚙️ Setup & Installation
 
-# 1. Clone the repository
+### 1. Clone the repository
 git clone [https://github.com/VKasarla05/multi-modal-fetal-abnormality-detection-ai.git]
+
+
 cd multi-modal-fetal-abnormality-detection-ai
 
-# 2. Install required packages
+### 2. Install required packages
+
+
 pip install -r requirements.txt
+
+
+---
+
+## 🚀 How to Run the Models
+
+This section describes how to train and evaluate each model in the project: **Ultrasound**, **ECG**, and **Fusion**. All notebooks are designed to be run independently and are well-commented for step-by-step execution.
+
+---
+
+### 🧠 1. Ultrasound Model  
+📍 Path: `Ultrasound/Ultrasound_Model.ipynb`
+
+- Uses labeled ultrasound images to detect brain abnormalities: **CSP** and **LV**.
+- The dataset is split into:
+  - `train/` – used for model training  
+  - `valid/` – used for validation during training  
+  - `test/` – used for final evaluation  
+  - Each folder includes an accompanying `_classes.csv` file with image labels.
+- Trains a **ResNet18** model from torchvision for multi-label classification.
+- After training, the model is saved as `ultrasound_resnet_model.pth`.
+- Evaluates model performance using accuracy, F1-score, and Grad-CAM visualizations.
+- Generalization is tested on **unlabeled Dataset2**, representing unseen fetal head images.
+
+---
+
+### 💓 2. ECG Model  
+📍 Path: `ECG/ECG_Model.ipynb`
+
+- Processes **4-channel, 10-second fetal ECG signals** using a **1D CNN + Bi-LSTM** architecture.
+- Performs filtering, normalization, and segmentation of ECG data from PhysioNet’s `set-a` and `set-b`.
+- Uses **oversampling** to balance normal and abnormal classes.
+- Trains and evaluates the model on non-invasive fetal ECG data.
+- Saves the model as `ecg_cnn_lstm_final.pth`.
+- Outputs classification results (Normal/Abnormal) and waveform-based confidence.
+
+---
+
+### 🔗 3. Fusion Model  
+📍 Path: `Fusion_MODEL.ipynb`
+
+- Combines outputs from the Ultrasound and ECG models:
+  - CSP & LV abnormality scores
+  - ECG normal/abnormal probabilities
+- The **Fusion Neural Network** is a lightweight 2-layer FC classifier trained to predict overall fetal health status.
+- Supports:
+  - Ultrasound-only inference  
+  - ECG-only inference  
+  - Full fusion mode (both modalities)
+- Evaluates performance and generates visual diagnostic reports stored in `/reports/` folder.
+- Final model is saved as `fusion_model.pth`.
+
 
