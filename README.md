@@ -115,6 +115,16 @@ This section describes how to train and evaluate each model in the project: **Ul
 > 📌 All metrics evaluated on the test sets after training. Grad-CAM and waveform-based explainability included.
 
 ---
+## 🎥 Project Presentation (YouTube)
+
+Watch our final project presentation here:
+
+🔗 [Click to Watch on YouTube]((https://youtu.be/qOPBxL6EJgI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+title="AI for Early Detection of Fetal Abnormalities" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+---
 
 ## 📥 Dataset Links
 
