@@ -37,3 +37,12 @@ Traditional fetal anomaly screening methods could be reliant on subjective inter
 
 📂 reports/                             # Grad-CAM visualizations and final prediction results
 ```
+⚙️ Setup & Installation
+
+# 1. Clone the repository
+git clone [https://github.com/VKasarla05/multi-modal-fetal-abnormality-detection-ai.git]
+cd multi-modal-fetal-abnormality-detection-ai
+
+# 2. Install required packages
+pip install -r requirements.txt
+
